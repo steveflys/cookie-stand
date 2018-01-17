@@ -68,6 +68,15 @@ function makeHeaderRow() {
 
 makeHeaderRow();
 var firstAndPike = new LocationSalesData('1st and Pike', 23, 65, 6.3);
-console.log(firstAndPike);
+var seatacAirport = new LocationSalesData('SeaTac Airport', 3, 24, 1.2);
+var seattleCenter = new LocationSalesData('Seattle Center', 11, 38, 3.7);
+var capitalHill = new LocationSalesData('Capital Hill', 20, 38, 2.3);
+var alki = new LocationSalesData('Alki', 2, 16, 4.6);
+
 firstAndPike.render();
+seatacAirport.render();
+seattleCenter.render();
+capitalHill.render();
+alki.render();
+
 
