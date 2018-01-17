@@ -47,7 +47,7 @@ LocationSalesData.prototype.render = function(){
   salesTable.appendChild(trE1);
 
 };
-console.log(locationSalesData);
+
 function renderLocationSalesData(){
   for (var i = 0; i < locationSalesData.length; i++) {
     locationSalesData[i].render();
