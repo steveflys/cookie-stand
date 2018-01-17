@@ -17,7 +17,7 @@ var salesTable = document.getElementById('salesTable');
 
 LocationSalesData.prototype.render = function(){  
   var trE1 = document.createElement('tr');
-
+  
   var tdE1 = document.createElement('td');
   tdE1.textContent = this.locationName;
   trE1.appendChild(tdE1);
@@ -34,11 +34,7 @@ LocationSalesData.prototype.render = function(){
 
     trE1.appendChild(tdE1);
 
-    console.log(this.totalCookiesSold);
     this.totalCookiesSold = this.totalCookiesSold + randomCookiesSold;
-    console.log(this.totalCookiesSold);
-    console.log(this.randomCookiesSold);
-    
   }
 
   tdE1 = document.createElement('td'),
