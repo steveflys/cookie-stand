@@ -1,6 +1,6 @@
 'use strict';
 
-var times = ['locationName','6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'totalCookiesSold'];
+var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var locationSalesData = [];
 
@@ -15,30 +15,30 @@ function LocationSalesData(locationName, minimumCustomers, maximumCustomers, coo
 
 var salesTable = document.getElementById('salesTable');
 
-LocationSalesData.prototype.render = function(){    
+LocationSalesData.prototype.render = function(){  
   var trE1 = document.createElement('tr');
 
+  var tdE1 = document.createElement('td');
+  tdE1.textContent = this.locationName;
+  trE1.appendChild(tdE1);
+  
   for (var i = 0; i < times.length; i++) {
 
-    if (i === 0 ) {
-      var tdE1 = document.createElement('td');
-      tdE1.textcontent = this.locationName;
-      trE1.appendChild(tdE1);
-    }
+    tdE1 = document.createElement('td');
 
-    else {
-      var tdE1 = document.createElement('td');
+    var randomCustomerNumber = Math.floor(Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers);
 
-      var randomCustomerNumber = Math.floor(Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers);
+    var randomCookiesSold = randomCustomerNumber * Math.floor(this.cookiesPerCustomer);
 
-      var randomCookiesSold = randomCustomerNumber * Math.floor(this.cookiesPerCustomer);
+    tdE1.textContent = randomCookiesSold;
 
-      tdE1.textContent = randomCookiesSold;
+    trE1.appendChild(tdE1);
 
-      trE1.appendChild(tdE1);
-    }
-
-    this.totalCookiesSold = this.totalCookiesSold + this.randomCookiesSold;
+    console.log(this.totalCookiesSold);
+    this.totalCookiesSold = this.totalCookiesSold + randomCookiesSold;
+    console.log(this.totalCookiesSold);
+    console.log(this.randomCookiesSold);
+    
   }
 
   tdE1 = document.createElement('td'),
@@ -55,6 +55,21 @@ LocationSalesData.prototype.render = function(){
 var firstAndPike = new LocationSalesData('1st and Pike', 23, 65, 6.3);
 console.log(firstAndPike);
 firstAndPike.render();
+
+
+// function makeHeaderRow() {
+//   var trEl = document.createElement('tr');
+//   var thEl = document.createElement('th');
+//   thEl.textContent = times[0];
+//   trEl.appendChild(thEl);
+
+//   for (var i = 0; i < times.length; i++) {
+//     var thEl = document.createElement('th');
+//     thEl.textContent = times[i];
+//     trEl.appendChild(thEl);
+//   }
+
+  // dogTable.appendChild(trEl);
 
 // 1st and Pike	23	65	6.3
 // SeaTac Airport	3	24	1.2
