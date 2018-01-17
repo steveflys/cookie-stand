@@ -27,10 +27,11 @@ LocationSalesData.prototype.render = function(){
     tdE1 = document.createElement('td');
 
     var randomCustomerNumber = Math.floor(Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers);
-
+    
     var randomCookiesSold = randomCustomerNumber * Math.floor(this.cookiesPerCustomer);
 
     tdE1.textContent = randomCookiesSold;
+    console.log(randomCookiesSold);
 
     trE1.appendChild(tdE1);
 
@@ -46,6 +47,12 @@ LocationSalesData.prototype.render = function(){
   salesTable.appendChild(trE1);
 
 };
+console.log(locationSalesData);
+function renderLocationSalesData(){
+  for (var i = 0; i < locationSalesData.length; i++) {
+    locationSalesData[i].render();
+  }
+}
 
 function makeHeaderRow() {
   var trEl = document.createElement('tr');
@@ -73,10 +80,6 @@ var seattleCenter = new LocationSalesData('Seattle Center', 11, 38, 3.7);
 var capitalHill = new LocationSalesData('Capital Hill', 20, 38, 2.3);
 var alki = new LocationSalesData('Alki', 2, 16, 4.6);
 
-firstAndPike.render();
-seatacAirport.render();
-seattleCenter.render();
-capitalHill.render();
-alki.render();
+renderLocationSalesData();
 
 
