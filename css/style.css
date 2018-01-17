@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(175, 190, 218);
+  font-size: 30px;
+  margin: 5px;
+}
+
+header {
+  color: salmon;
+  text-align: center;
+  font-family: 'Lemon', cursive;
+  font-size: 300%;
+  border: 2px;
+  border-color: red;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  border: 1px;
+  border-color: blue;
+}
+
+section.navbar {
+  font-family: 'Times New Roman', Times, serif;
+  align: center;
+  background-color: blanchedalmond;
+  font-size: 50%;
+}
+
+p {
+  color: black;
+  margin: 20px;
+}
+ 
+img {
+  display: block;  
+  margin: 0px auto;
+}
+
+img.align-center {
+  margin-top: 2%;
+  margin-top: 2%;
+}
+
+img.large {
+  width: 75%;
+  }
