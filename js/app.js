@@ -2,6 +2,10 @@
 
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+var timeTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+var grandTotal = 0
+
 var locationSalesData = [];
 
 function LocationSalesData(locationName, minimumCustomers, maximumCustomers, cookiesPerCustomer) {
@@ -17,7 +21,7 @@ var salesTable = document.getElementById('salesTable');
 
 LocationSalesData.prototype.render = function(){  
   var trE1 = document.createElement('tr');
-  
+
   var tdE1 = document.createElement('td');
   tdE1.textContent = this.locationName;
   trE1.appendChild(tdE1);
@@ -27,15 +31,20 @@ LocationSalesData.prototype.render = function(){
     tdE1 = document.createElement('td');
 
     var randomCustomerNumber = Math.floor(Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers);
-    
+
     var randomCookiesSold = randomCustomerNumber * Math.floor(this.cookiesPerCustomer);
 
     tdE1.textContent = randomCookiesSold;
-    console.log(randomCookiesSold);
 
     trE1.appendChild(tdE1);
 
     this.totalCookiesSold = this.totalCookiesSold + randomCookiesSold;
+
+    var timeTotalsNow = timeTotals[i] + randomCookiesSold;
+
+    timeTotals[i] = timeTotalsNow;
+
+    grandTotal = grandTotal + timeTotalsNow;
   }
 
   tdE1 = document.createElement('td'),
@@ -49,7 +58,7 @@ LocationSalesData.prototype.render = function(){
 };
 
 function renderLocationSalesData(){
-  for (var i = 0; i < locationSalesData.length; i++) {
+  for (var i in locationSalesData) {
     locationSalesData[i].render();
   }
 }
@@ -72,6 +81,24 @@ function makeHeaderRow() {
 
   salesTable.appendChild(trEl);
 }
+function makeTimeTotalsRow() {
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td')
+  tdEl.textContent = 'Total Cookies per Hour';
+  trEl.appendChild(tdEl);
+
+  for (var i in timeTotals) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = timeTotals[i];
+    trEl.appendChild(tdEl);
+  }
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = grandTotal;
+  trEl.appendChild(tdEl);
+
+  salesTable.appendChild(trEl);
+}
 
 makeHeaderRow();
 var firstAndPike = new LocationSalesData('1st and Pike', 23, 65, 6.3);
@@ -81,5 +108,6 @@ var capitalHill = new LocationSalesData('Capital Hill', 20, 38, 2.3);
 var alki = new LocationSalesData('Alki', 2, 16, 4.6);
 
 renderLocationSalesData();
+makeTimeTotalsRow();
 
 
