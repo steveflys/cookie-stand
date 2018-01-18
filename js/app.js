@@ -101,18 +101,21 @@ function makeTimeTotalsRow() {
   salesTable.appendChild(trEl);
 }
 
-// function addNewLocation(event) {
-//   event.preventDefault();
-//   console.log(event.target.dogName.value);
-//   var newName = event.target.dogName.value;
-//   var newColor = event.target.color.value;
-//   var newBreed = event.target.breed.value;
-//   var newNickname = event.target.nickname.value;
+function addNewLocation(event) {
+  event.preventDefault();
+  var newLocationName = event.target.locationName.value;
+  var newMinimumCustomers = event.target.minimumCustomers.valueAsNumber;
+  var newMaximumCustomers = event.target.maximumCustomers.valueAsNumber;
+  var newCookiesPerCustomer = event.target.cookiesPerCustomer.valueAsNumber;
 
-//   new Dog(newName, newColor, newBreed, newNickname);
+  new LocationSalesData(newLocationName, newMinimumCustomers, newMaximumCustomers, newCookiesPerCustomer);
 
+  salesTable.innerHTML = '';
 
-  
+  makeHeaderRow();
+  renderLocationSalesData();
+  makeTimeTotalsRow();
+}
 
 makeHeaderRow();
 var firstAndPike = new LocationSalesData('1st and Pike', 23, 65, 6.3);
@@ -121,7 +124,7 @@ var seattleCenter = new LocationSalesData('Seattle Center', 11, 38, 3.7);
 var capitalHill = new LocationSalesData('Capital Hill', 20, 38, 2.3);
 var alki = new LocationSalesData('Alki', 2, 16, 4.6);
 
+salesTableInput.addEventListener('submit', addNewLocation);
+
 renderLocationSalesData();
 makeTimeTotalsRow();
-
-
