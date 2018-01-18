@@ -4,7 +4,7 @@ var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 var timeTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-var grandTotal = 0
+var grandTotal = 0;
 
 var locationSalesData = [];
 
@@ -81,9 +81,10 @@ function makeHeaderRow() {
 
   salesTable.appendChild(trEl);
 }
+
 function makeTimeTotalsRow() {
   var trEl = document.createElement('tr');
-  var tdEl = document.createElement('td')
+  var tdEl = document.createElement('td');
   tdEl.textContent = 'Total Cookies per Hour';
   trEl.appendChild(tdEl);
 
@@ -99,6 +100,19 @@ function makeTimeTotalsRow() {
 
   salesTable.appendChild(trEl);
 }
+
+// function addNewLocation(event) {
+//   event.preventDefault();
+//   console.log(event.target.dogName.value);
+//   var newName = event.target.dogName.value;
+//   var newColor = event.target.color.value;
+//   var newBreed = event.target.breed.value;
+//   var newNickname = event.target.nickname.value;
+
+//   new Dog(newName, newColor, newBreed, newNickname);
+
+
+  
 
 makeHeaderRow();
 var firstAndPike = new LocationSalesData('1st and Pike', 23, 65, 6.3);
