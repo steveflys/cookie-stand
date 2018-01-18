@@ -14,10 +14,29 @@
       <a href=index.html>Home</a>
     </section>
 
-
     <h1>Cookie Sales by Location and time</h1>
     
     <table id="salesTable"></table>
+
+    <form id="salesTableInput">
+      <fieldset>        
+        <legend>Add New Location</legend>
+
+        <label for="locationName">Location Name:</label>
+        <input name="locationName" type="text" />
+
+        <label for="minimumCustomers">Minimum Customers:</label>
+        <input name="minimumCustomers" type="number" />
+
+        <label for="maximumCustomers">Maximum Customers:</label>
+        <input name="maximumCustomers" type="number" />
+
+        <label for="cookiesPerCustomer">Cookies Per Customer:</label>
+        <input name="cookiesPerCustomer" type="number" />
+
+        <button id="add-location">Add a Location</button>
+      </fieldset>
+    </form>
 
     <script type="text/javascript" src="js/app.js"></script>
   </body>

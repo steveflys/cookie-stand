@@ -45,3 +45,28 @@ img.align-center {
 img.large {
   width: 75%;
   }
+
+form {
+  width: 50%;
+}
+
+table {
+  width: 100%;
+  border: 4px solid salmon;
+}
+
+tr {
+  margin: 2px;
+  padding: 2px;
+  background-color: darkgoldenrod;
+}
+td {
+  border: 2px solid black;
+  padding: 1px;
+  text-align: right;
+}
+th {
+  background-color: brown;
+  border: 2px solid black;
+  text-align: center;
+}
