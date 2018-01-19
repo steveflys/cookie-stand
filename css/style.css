@@ -55,6 +55,10 @@ table {
   border: 4px solid salmon;
 }
 
+table :first-child {
+  background-color: blue
+}
+
 tr {
   margin: 2px;
   padding: 2px;
@@ -69,4 +73,7 @@ th {
   background-color: brown;
   border: 2px solid black;
   text-align: center;
+}
+tr :first-child {
+  text-align: left;
 }
