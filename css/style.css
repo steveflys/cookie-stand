@@ -16,15 +16,15 @@ header {
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
-  border: 1px;
-  border-color: blue;
+  margin-bottom: 10px;
 }
 
 section.navbar {
   font-family: 'Times New Roman', Times, serif;
   align: center;
   background-color: blanchedalmond;
-  font-size: 50%;
+  font-size: 75%;
+  margin-bottom: 20px;
 }
 
 p {
@@ -52,11 +52,12 @@ form {
 
 table {
   width: 100%;
-  border: 4px solid salmon;
+  border: 4px solid black;
 }
 
-table :first-child {
-  background-color: blue
+table :last-child {
+  background-color: salmon;
+  padding: 5px;
 }
 
 tr {
@@ -66,7 +67,8 @@ tr {
 }
 td {
   border: 2px solid black;
-  padding: 1px;
+  padding: 5px;
+  border-radius: 10px;
   text-align: right;
 }
 th {
@@ -76,4 +78,36 @@ th {
 }
 tr :first-child {
   text-align: left;
+}
+
+form {
+  width: 45%;
+  margin: 30px;
+  border: 3px solid black;
+  padding: 5px;
+}
+form legend {
+  padding: 10px;
+  text-align: center;
+  font-size: 120%;
+}
+
+form label {
+  object-position: bottom;
+}
+
+form input {
+  width: 120px;
+  height: 30px;
+}
+
+#locationNameInput {
+  width: 200px;
+}
+
+form button {
+  background-color: salmon;
+  font-size: 120%;
+  margin-top: 10px;
+  border: 2px solid black;
 }
