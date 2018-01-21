@@ -1,5 +1,4 @@
 body {
-  background-color: rgb(175, 190, 218);
   font-size: 30px;
   margin: 5px;
 }
@@ -12,6 +11,11 @@ header {
   border: 2px;
   border-color: red;
 }
+
+body ul li {
+  display: inline-block;
+}
+
 
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -34,17 +38,40 @@ p {
  
 img {
   display: block;  
-  margin: 0px auto;
+  margin: 10px auto;
 }
 
 img.align-center {
-  margin-top: 2%;
-  margin-top: 2%;
+  margin-top: 10px;
+}
+
+img.align-left {
+  float: left;
+  padding: 10px;
+  margin-left: 66%;
+}
+
+img.align-right {
+  float: right;
+  padding: 10px;
+  margin-right: 2%;
+}
+
+img.small {
+  width: 5%;
+}
+
+img.medium {
+  width: 10%;
 }
 
 img.large {
-  width: 75%;
-  }
+  width: 40%;
+}
+
+img.xlarge {
+  width: 53%;
+}
 
 form {
   width: 50%;
