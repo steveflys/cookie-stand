@@ -10,8 +10,6 @@
   </head>
   <body>
 
-    <Header>Pat's Salmon Cookies</Header>
-
     <section class="navBar">
         <a href=index.html>Home</a>
         <a href=Locations.html>Locations</a>
@@ -19,40 +17,71 @@
         <a href=sales.html>Sales</a>
         <a href="#Contact">Contact</a>
     </section>
-
-    <div id="topImage">
-        <img src="images/salmon.png" class="align-right large" />
-        <img src="images/frosted-cookie.jpg" class="align-center medium" />
-        <img src="images/chinook.jpg" class="align-right large" />
-    </div>
-
-   
+      
+    <Header>Pat's Salmon Cookies</Header>
+      
+    <ul class="topImage">
+        <li><img src="images/salmon.png" class="align-left large" /></li>
+        <li><img src="images/chinook.jpg" class="align-right xlarge" />
+    </li>
+    
     <h2>Welcome to Pat's Cookie Jar</h2>
     
-    <form id="cookieJar">
-        <fieldset>        
-            <legend>Cookie Jar Contents</legend>
+    <!-- <form id="cookieJar">
 
-            <img src="images/frosted-cookie.jpg" class="align-left small" />
-            <label for="frostedCookie">Frosted Cookie:</label>
-            <input name="frostedCookie" type="number" id="frostedCookieInput"/>
+        <legend>Cookie Jar Contents</legend>
+
+        <img src="images/frosted-cookie.jpg" class="align-left small" />
+        <label for="frostedCookie">Frosted Cookie:</label>
+        <input name="frostedCookie" type="number" id="frostedCookieInput"/>
   
-            <img src="images/cutter.jpg" class="align-left small" />
-            <label for="cookieCutter">Cookie Cutter:</label>
-            <input name="cookieCutter" type="number" /></fieldset>
+        <img src="images/cutter.jpeg" class="align-left small" />
+        <label for="cookieCutter">Cookie Cutter:</label>
+        <input name="cookieCutter" type="number" /></fieldset>
 
-            <img src="images/fish.jpg" class="align-left small" />
-            <label for="salmonStickers">Salmon Stickers</label>
-            <input name="salmonStickers" type="number" /></fieldset>
+        <img src="images/fish.jpg" class="align-left small" />
+        <label for="salmonStickers">Salmon Stickers</label>
+        <input name="salmonStickers" type="number" /></fieldset>
 
-            <img src="images/shirt.jpg" class="align-left small" />
-            <label for="salmonShirt">Salmon Shirt Quantity:</label>
-            <input name="salmonShirt" type="number"/>
-            <input name="salmonShirt" type="text"/>
+        <img src="images/shirt.jpg" class="align-left small" />
+        <label for="salmonShirt">Salmon Shirt Quantity:</label>
+        <input name="salmonShirt" type="number"/>
+        <input name="salmonShirt" type="text"/>
   
         <button id="placeOrder">Place Your Order</button>
-    </fieldset>
-    </form>
+
+    </form> -->
+
+    <form id="cookieJar">
+
+            <legend>Cookie Jar Contents</legend>
+            <ul>
+                <li>
+                    <img src="images/frosted-cookie.jpg" class="align-left small" />
+                    <label for="frostedCookie">Frosted Cookie:</label>
+                    <input name="frostedCookie" type="number" id="frostedCookieInput"/>
+                </li>
+                <li>
+                    <img src="images/cutter.jpeg" class="align-left small" />
+                    <label for="cookieCutter">Cookie Cutter:</label>
+                    <input name="cookieCutter" type="number" /></fieldset>
+                </li>
+                <li>
+                    <img src="images/fish.jpg" class="align-left small" />
+                    <label for="salmonStickers">Salmon Stickers</label>
+                    <input name="salmonStickers" type="number" /></fieldset>
+                </li>
+                <li>
+                    <img src="images/shirt.jpg" class="align-left small" />
+                    <label for="salmonShirt">Salmon Shirt Quantity:</label>
+                    <input name="salmonShirt" type="number"/>
+                    <label for="salmonShirt">Size:</label>
+                    <input name="salmonShirt" type="text"/>
+                </li>
+            </ul>    
+            <button id="placeOrder">Place Your Order</button>
+    
+        </form>
   
 
 
