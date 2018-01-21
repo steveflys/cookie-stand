@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(175, 190, 218);
+  background-color: rgb(81, 186, 218);
   font-size: 30px;
   margin: 5px;
 }
@@ -13,18 +13,25 @@ header {
   border-color: red;
 }
 
+body ul {
+  background-color: white;
+}
+body ul li {
+  display: inline-block;
+}
+
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
-  border: 1px;
-  border-color: blue;
+  margin-bottom: 10px;
+  font-size: 120%;
 }
 
 section.navbar {
   font-family: 'Times New Roman', Times, serif;
   align: center;
-  background-color: blanchedalmond;
-  font-size: 50%;
+  font-size: 75%;
+  margin-bottom: 20px;
 }
 
 p {
@@ -34,17 +41,40 @@ p {
  
 img {
   display: block;  
-  margin: 0px auto;
+  margin: 10px auto;
 }
 
 img.align-center {
-  margin-top: 2%;
-  margin-top: 2%;
+  margin-top: 10px;
+}
+
+img.align-left {
+  float: left;
+  padding: 10px;
+  margin-left: 66%;
+}
+
+img.align-right {
+  float: right;
+  padding: 10px;
+  margin-right: 2%;
+}
+
+img.small {
+  width: 19%;
+}
+
+img.medium {
+  width: 10%;
 }
 
 img.large {
-  width: 75%;
-  }
+  width: 40%;
+}
+
+img.xlarge {
+  width: 53%;
+}
 
 form {
   width: 50%;
@@ -52,11 +82,12 @@ form {
 
 table {
   width: 100%;
-  border: 4px solid salmon;
+  border: 4px solid black;
 }
 
-table :first-child {
-  background-color: blue
+table :last-child {
+  background-color: salmon;
+  padding: 5px;
 }
 
 tr {
@@ -66,7 +97,8 @@ tr {
 }
 td {
   border: 2px solid black;
-  padding: 1px;
+  padding: 5px;
+  border-radius: 10px;
   text-align: right;
 }
 th {
@@ -76,4 +108,54 @@ th {
 }
 tr :first-child {
   text-align: left;
+}
+
+form {
+  width: 45%;
+  margin: 30px;
+  border: 3px solid black;
+  padding: 5px;
+}
+form legend {
+  padding: 10px;
+  text-align: center;
+  font-size: 180%;
+  color: red;
+}
+
+form label {
+  object-position: bottom;
+}
+
+form input {
+  width: 120px;
+  height: 30px;
+}
+
+#locationNameInput {
+  width: 200px;
+}
+
+form button {
+  background-color: salmon;
+  font-size: 120%;
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+#cookieJar {
+  width: 90%;
+  display: inline-block;
+  border: 20px solid red;
+}
+
+#cookieJar img.align-left {
+  float: left;
+  margin-left: 5%;
+}
+
+#contact {
+  color: salmon;
+  font-size: 130%;
+  margin-left: 5%;
 }
