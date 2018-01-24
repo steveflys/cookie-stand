@@ -26,7 +26,8 @@ LocationSalesData.prototype.render = function(){
   tdE1.textContent = this.locationName;
   trE1.appendChild(tdE1);
 
-  for (var i = 0; i < times.length; i++) {
+  for (var j = 0; j < times.length; j++) {
+
 
     tdE1 = document.createElement('td');
 
@@ -40,11 +41,9 @@ LocationSalesData.prototype.render = function(){
 
     this.totalCookiesSold = this.totalCookiesSold + randomCookiesSold;
 
-    var timeTotalsNow = timeTotals[i] + randomCookiesSold;
+    var timeTotalsNow = timeTotals[j] + randomCookiesSold;
 
-    timeTotals[i] = timeTotalsNow;
-
-    grandTotal = grandTotal + timeTotalsNow;
+    timeTotals[j] = timeTotalsNow;
   }
 
   tdE1 = document.createElement('td'),
@@ -52,6 +51,8 @@ LocationSalesData.prototype.render = function(){
   tdE1.textContent = this.totalCookiesSold;
 
   trE1.appendChild(tdE1);
+
+  this.totalCookiesSold = 0;
 
   salesTable.appendChild(trE1);
 
@@ -92,6 +93,7 @@ function makeTimeTotalsRow() {
     tdEl = document.createElement('td');
     tdEl.textContent = timeTotals[i];
     trEl.appendChild(tdEl);
+    grandTotal = grandTotal + timeTotals[i];
   }
 
   tdEl = document.createElement('td');
@@ -99,6 +101,7 @@ function makeTimeTotalsRow() {
   trEl.appendChild(tdEl);
 
   salesTable.appendChild(trEl);
+  grandTotal = 0;
 }
 
 function addNewLocation(event) {
@@ -111,6 +114,8 @@ function addNewLocation(event) {
   new LocationSalesData(newLocationName, newMinimumCustomers, newMaximumCustomers, newCookiesPerCustomer);
 
   salesTable.innerHTML = '';
+
+  timeTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   makeHeaderRow();
   renderLocationSalesData();
