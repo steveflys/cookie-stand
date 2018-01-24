@@ -26,10 +26,6 @@ LocationSalesData.prototype.render = function(){
   tdE1.textContent = this.locationName;
   trE1.appendChild(tdE1);
 
-  for (var i = 0; i < locationSalesData.length; i++){
-    locationSalesData.totalCookiesSold = 0;
-  }
-
   for (var j = 0; j < times.length; j++) {
 
 
@@ -55,6 +51,8 @@ LocationSalesData.prototype.render = function(){
   tdE1.textContent = this.totalCookiesSold;
 
   trE1.appendChild(tdE1);
+
+  this.totalCookiesSold = 0;
 
   salesTable.appendChild(trE1);
 
